@@ -22,6 +22,8 @@ const InputForm = ({ onSubmit }) => {
         isJwtValid = false;
       }
     }
+    console.log('JWT submitted:', input);
+    console.log('JWT isJwtValid:', isJwtValid);
     onSubmit({
       text: input,
       timestamp: dayjs().format('YYYY-MM-DD HH:mm:ss'),
