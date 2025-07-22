@@ -8,15 +8,21 @@ const DataTable = ({ entries }) => (
       </tr>
     </thead>
     <tbody>
-      {entries.map((row, idx) => (
+      {entries.map((row, idx) => {
         console.log('Rendering row:', row);
         return (
-        <tr key={idx} style={{ backgroundColor: row.isJwtValid ? '#fecaca' : 'white', color: row.isJwtValid ? 'black' : 'black'}}>
-          <td>{row.text}</td>
-          <td>{row.timestamp}</td>
-        </tr>
+          <tr
+            key={idx}
+            style={{
+              backgroundColor: row.isJwtValid ? '#fecaca' : 'white',
+              color: row.isJwtValid ? 'black' : 'black',
+            }}
+          >
+            <td>{row.text}</td>
+            <td>{row.timestamp}</td>
+          </tr>
         );
-      ))}
+      })}
     </tbody>
   </table>
 );
