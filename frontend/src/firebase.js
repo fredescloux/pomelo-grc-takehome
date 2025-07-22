@@ -2,9 +2,9 @@ import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyArXGta4kADG3hWUGKngXW9vSESH_7HUBY",
-  authDomain: "pomelo-grc-takehome.firebaseapp.com",
-  projectId: "pomelo-grc-takehome",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
