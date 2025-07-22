@@ -12,9 +12,9 @@ const run = async () => {
 
   const exportedPubKey = await exportSPKI(publicKey);
 
-  console.log('✅ JWT:');
+  console.log('JWT:');
   console.log(jwt);
-  console.log('\n🛡️ Matching Public Key (put this in InputForm.jsx):\n');
+  console.log('\n Matching public key:\n');
   console.log(exportedPubKey);
 
   fs.writeFileSync('jwt.txt', jwt);
