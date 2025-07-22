@@ -1,4 +1,4 @@
-//import { importSPKI, jwtVerify } from 'jose';
+import { importSPKI, jwtVerify } from 'jose';
 import { useState } from 'react';
 import { signInWithPopup, signOut } from 'firebase/auth';
 import { auth, provider } from './firebase';
@@ -6,8 +6,12 @@ import InputForm from './components/InputForm';
 import DataTable from './components/DataTable';
 
 function App() {
+  console.log('App is rendering');
+  
   const [entries, setEntries] = useState([]);
   const [user, setUser] = useState(null);
+
+  console.log("Current user:", user);
 
   const handleLogin = async () => {
     try {

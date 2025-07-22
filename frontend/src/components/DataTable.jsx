@@ -1,4 +1,4 @@
-console.log('📦 Entries received:', entries);
+console.log('Entries received:', entries);
 const DataTable = ({ entries }) => (
   <table>
     <thead>
