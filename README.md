@@ -9,7 +9,7 @@ The goal was to build a lightweight React application that:
 - Frontend framework: React
 - Build tool: Vite
 - Authentication: Firebase
-- JWT verification: jose
+- JWT verification: jsrsasign
 - Hosting: Vercel
 - Version control: Git & GitHub
 
@@ -24,10 +24,10 @@ The goal was to build a lightweight React application that:
 
 # Notes
 - Used Vite for the first time: so fast and intuitive!
-- Leveraged jose instead of jsonwebtoken
+- Leveraged jsrsasign instead of jose (issues with ES256) or jsonwebtoken
 - Gained hands-on experience with Firebase in a React app
 
 # Author
-Fred Descloux**
+Fred Descloux
 GitHub: [@fredescloux](https://github.com/fredescloux)
 LinkedIn: [linkedin.com/in/fredericdescloux](https://linkedin.com/in/fredericdescloux)
