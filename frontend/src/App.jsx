@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { auth, provider } from "./firebase";
+import { useState } from "react";
 import { signInWithPopup, signOut } from "firebase/auth";
+import { auth, provider } from "./firebase";
 import InputForm from "./components/InputForm";
 import DataTable from "./components/DataTable";
 
