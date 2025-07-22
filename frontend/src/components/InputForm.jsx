@@ -2,8 +2,10 @@ import { useState } from 'react';
 import dayjs from 'dayjs';
 import { importSPKI, jwtVerify } from 'jose';
 
-const publicKey = `-----BEGIN PUBLIC KEY-----MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEMU1JFVEO9FkVr0r041GpAWzKvQi1TBYmarJj3+aNeC2aK9GT7Hct1OJGWQGbUkNWTeUr+Ui09PjBit+AMYuHgA==-----END PUBLIC KEY-----`;
-
+const publicKey = `-----BEGIN PUBLIC KEY-----
+MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEMU1JFVEO9FkVr0r041GpAWzKvQi1TBYm
+arJj3+aNeC2aK9GT7Hct1OJGWQGbUkNWTeUr+Ui09PjBit+AMYuHgA==
+-----END PUBLIC KEY-----`;
 
 const InputForm = ({ onSubmit }) => {
   const [input, setInput] = useState('');
