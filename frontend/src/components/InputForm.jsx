@@ -3,8 +3,8 @@ import dayjs from 'dayjs';
 import { importSPKI, jwtVerify } from 'jose';
 
 const publicKey = `-----BEGIN PUBLIC KEY-----
-MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEMU1JFVEO9FkVr0r041GpAWzKvQi1TBYm
-arJj3+aNeC2aK9GT7Hct1OJGWQGbUkNWTeUr+Ui09PjBit+AMYuHgA==
+MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEnet8HH2L7Rb2C39LB9GjY+woWo57
+9VRB3VYbQUYW1Btp/N21+18v1wiU11Li5+1RGFtZSq0h30bwWSk60QEuZw==
 -----END PUBLIC KEY-----`;
 
 const InputForm = ({ onSubmit }) => {

@@ -56,7 +56,7 @@ function App() {
             </button>
           </div>
 
-          <InputForm setEntries={setEntries} />
+          <InputForm onSubmit={(data) => setEntries(prev => [data, ...prev])} />
           <DataTable entries={entries} />
         </div>
       )}
