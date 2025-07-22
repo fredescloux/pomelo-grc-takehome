@@ -1,23 +1,34 @@
+//import { importSPKI, jwtVerify } from 'jose';
 import { useState } from 'react';
-import { importSPKI, jwtVerify } from 'jose';
-import InputForm from './components/InputForm';
-import DataTable from './components/DataTable';
 import { signInWithPopup, signOut } from 'firebase/auth';
 import { auth, provider } from './firebase';
+import InputForm from './components/InputForm';
+import DataTable from './components/DataTable';
 
 function App() {
   const [entries, setEntries] = useState([]);
   const [user, setUser] = useState(null);
 
   const handleLogin = async () => {
-    const result = await signInWithPopup(auth, provider);
-    setUser(result.user);
+    try {
+      const result = await signInWithPopup(auth, provider);
+      setUser(result.user);
+    } catch (error) {
+      console.error('Login failed:', error);
+    }
   };
 
-  const handleLogout = () => signOut(auth).then(() => setUser(null));
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      setUser(null);
+    } catch (error) {
+      console.error('Logout failed:', error);
+    }
+  };
 
   return (
-    <div>
+    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
       {user ? (
         <>
           <p>Welcome, {user.displayName}</p>
