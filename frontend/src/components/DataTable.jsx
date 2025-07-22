@@ -8,7 +8,7 @@ const DataTable = ({ entries }) => (
     </thead>
     <tbody>
       {entries.map((row, idx) => (
-        <tr key={idx} style={{ backgroundColor: row.isJwtValid ? 'red' : 'white' }}>
+        <tr key={idx} style={{ backgroundColor: row.isJwtValid ? '#fecaca' : 'white' }}>
           <td>{row.text}</td>
           <td>{row.timestamp}</td>
         </tr>

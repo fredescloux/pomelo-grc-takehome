@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { importSPKI, jwtVerify } from 'jose';
 import InputForm from './components/InputForm';
 import DataTable from './components/DataTable';
 import { signInWithPopup, signOut } from 'firebase/auth';
