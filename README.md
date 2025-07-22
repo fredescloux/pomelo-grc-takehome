@@ -3,13 +3,13 @@ The goal was to build a lightweight React application that:
 - Accepts user input via a form
 - Displays entries in a table
 - Detects valid JWTs submitted in the input field
-- Highlights JWTs with a **verified signature** using a specific public key
+- Highlights JWTs with a verified signature using a specific public key
 
 # Tech stack
 - Frontend framework: React
 - Build tool: Vite
 - Authentication: Firebase
-- JWT verification**: jose
+- JWT verification: jose
 - Hosting: Vercel
 - Version control: Git & GitHub
 
@@ -23,7 +23,7 @@ The goal was to build a lightweight React application that:
   - Invalid JWTs are treated as regular input
 
 # Notes
-- Used Vite for the first time — so fast and intuitive!
+- Used Vite for the first time: so fast and intuitive!
 - Leveraged jose instead of jsonwebtoken
 - Gained hands-on experience with Firebase in a React app
 
