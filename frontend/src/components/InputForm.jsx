@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import dayjs from 'dayjs';
 //import { importSPKI, jwtVerify } from 'jose';
-import { KJUR, KEYUTIL } from 'jsrsasign';
+import { KJUR } from 'https://esm.sh/jsrsasign@10.8.6';
 
 const publicKey = `-----BEGIN PUBLIC KEY-----
 MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEMU1JFVEO9FkVr0r041GpAWzKvQi1TBYm
