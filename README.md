@@ -22,21 +22,6 @@ The goal was to build a lightweight React application that:
   - If valid, the row is highlighted in red
   - Invalid JWTs are treated as regular input
 
-# Project structure
-pomelo-grc-takehome/
-├── public/
-├── src/
-│   ├── components/
-│   │   ├── InputForm.jsx
-│   │   ├── DataTable.jsx
-│   ├── firebase.js
-│   ├── App.jsx
-│   └── main.jsx
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
-
 # Notes
 - Used Vite for the first time — so fast and intuitive!
 - Leveraged jose instead of jsonwebtoken
