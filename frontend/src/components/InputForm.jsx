@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import dayjs from 'dayjs';
-import { importSPKI, jwtVerify } from 'jose';
+//import { importSPKI, jwtVerify } from 'jose';
+import { KJUR, KEYUTIL } from 'jsrsasign';
 
 const publicKey = `-----BEGIN PUBLIC KEY-----
 MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEMU1JFVEO9FkVr0r041GpAWzKvQi1TBYm
@@ -13,17 +14,23 @@ const InputForm = ({ onSubmit }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     let isJwtValid = false;
+
     if (input.split('.').length === 3) {
       try {
-        const key = await importSPKI(publicKey, 'ES256');
-        await jwtVerify(input, key);
-        isJwtValid = true;
+        //const key = await importSPKI(publicKey, 'ES256');
+        //await jwtVerify(input, key);
+        //isJwtValid = true;
+        const isValid = KJUR.jws.JWS.verify(input, publicKey, ['ES256']);
+        isJwtValid = isValid;
       } catch (err) {
-        isJwtValid = false;
+        console.error('JWT verification failed:', err);
+        //isJwtValid = false;
       }
     }
+
     console.log('JWT submitted:', input);
     console.log('JWT isJwtValid:', isJwtValid);
+
     onSubmit({
       text: input,
       timestamp: dayjs().format('YYYY-MM-DD HH:mm:ss'),
